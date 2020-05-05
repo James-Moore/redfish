@@ -1,0 +1,2 @@
+redfish~=2.1.5
+pprint~=0.1

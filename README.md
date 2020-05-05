@@ -13,3 +13,6 @@ The DMTF's Python Library can be found here:
 https://github.com/DMTF/python-redfish-library
 
 ### Environment
+Requires the installation of Python 3
+
+Install required python libraries using requirements.txt

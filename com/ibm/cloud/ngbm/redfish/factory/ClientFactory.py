@@ -22,4 +22,4 @@ class ClientFactory:
     client.login(username=rf.username, password=rf.password, auth=rf.authentication)
 
   def logoutClient(self, client : HttpClient):
-      client.logout()
+    client.logout()

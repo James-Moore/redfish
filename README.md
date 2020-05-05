@@ -89,4 +89,158 @@ $ curl -k https://localhost:8443/redfish/v1/ | jq -r .
   "Oem": {}
 }
 ```
-  
+
+### Example Output from VirtualMediaTest
+
+```
+/Users/james.mooreibm.com/PycharmProjects/redfish/venv/bin/python /Users/james.mooreibm.com/PycharmProjects/redfish/VirtualMediaTest.py
+Configuration File: /Users/james.mooreibm.com/PycharmProjects/redfish/etc/redfish.json
+CONNECTING REDFISH VIRTUAL MEDIA CLIENT##################################
+CONNECTED: False
+CONNECTED: True
+LIST VIRTUAL MEDIA##################################
+{'@odata.context': '/redfish/v1/$metadata#VirtualMediaCollection.VirtualMediaCollection',
+ '@odata.id': '/redfish/v1/Managers/1/VM1',
+ '@odata.type': '#VirtualMediaCollection.VirtualMediaCollection',
+ 'Description': 'Collection of Virtual Media for this System',
+ 'Members': [{'@odata.id': '/redfish/v1/Managers/1/VM1/CD1'}],
+ 'Members@odata.count': 1,
+ 'Name': 'Virtual Media Collection',
+ 'Oem': {'Supermicro': {'@odata.type': '#SmcVirtualMediaExtensions.v1_0_0.VirtualMediaCollection',
+                        'VirtualMediaConfig': {'@odata.id': '/redfish/v1/Managers/1/VM1/CfgCD'}}}}
+
+
+
+LIST VIRTUAL MEDIA DEVICE###########################
+'Virtual Media Devices Mounted: 1'
+{'@odata.context': '/redfish/v1/$metadata#VirtualMedia.VirtualMedia',
+ '@odata.id': '/redfish/v1/Managers/1/VM1/CD1',
+ '@odata.type': '#VirtualMedia.v1_1_0.VirtualMedia',
+ 'ConnecteVia': 'URI',
+ 'Id': 'CD1',
+ 'Image': '192.168.76.39/sambashare/ubuntu-20.04-live-server-amd64.iso',
+ 'ImageName': 'ubuntu-20.04-live-server-amd64.iso',
+ 'Inserted': True,
+ 'MediaTypes': ['CD', 'DVD'],
+ 'Name': 'Virtual Removable Media',
+ 'WriteProtected': True}
+
+
+
+UNMOUNT VIRTUAL MEDIA DEVICE###########################
+{'Success': {'@Message.ExtendedInfo': [{'Message': 'The Virtual Media was '
+                                                   'unmounted successfully.',
+                                        'MessageArgs': [''],
+                                        'MessageId': 'SMC.v1_0_0.OemVmUnmounted',
+                                        'RelatedProperties': [''],
+                                        'Resolution': 'No resolution was '
+                                                      'required.',
+                                        'Severity': 'Ok'}],
+             'Message': 'Successfully Completed Request. See ExtendedInfo for '
+                        'more information.',
+             'code': 'Base.v1_4_0.Success'}}
+
+
+
+LIST VIRTUAL MEDIA DEVICE###########################
+'Can not list virtual media devices because none are attached.'
+
+
+
+MOUNT VIRTUAL MEDIA DEVICE###########################
+{'Success': {'@Message.ExtendedInfo': [{'Message': 'The Virtual Media was '
+                                                   'mounted successfully.',
+                                        'MessageArgs': [''],
+                                        'MessageId': 'SMC.v1_0_0.OemVmMounted',
+                                        'RelatedProperties': [''],
+                                        'Resolution': 'No resolution was '
+                                                      'required.',
+                                        'Severity': 'Ok'}],
+             'Message': 'Successfully Completed Request. See ExtendedInfo for '
+                        'more information.',
+             'code': 'Base.v1_4_0.Success'}}
+
+
+
+UPDATE VIRTUAL MEDIA##################################
+{'Success': {'@Message.ExtendedInfo': [{'Message': 'The Virtual Media was '
+                                                   'configured successfully.',
+                                        'MessageArgs': [''],
+                                        'MessageId': 'SMC.v1_0_0.OemVmCdcfgModified',
+                                        'RelatedProperties': [''],
+                                        'Resolution': 'No resolution was '
+                                                      'required.',
+                                        'Severity': 'Ok'}],
+             'Message': 'Successfully Completed Request. See ExtendedInfo for '
+                        'more information.',
+             'code': 'Base.v1_4_0.Success'}}
+{'@odata.context': '/redfish/v1/$metadata#VirtualMediaCollection.VirtualMediaCollection',
+ '@odata.id': '/redfish/v1/Managers/1/VM1',
+ '@odata.type': '#VirtualMediaCollection.VirtualMediaCollection',
+ 'Description': 'Collection of Virtual Media for this System',
+ 'Members': [{'@odata.id': '/redfish/v1/Managers/1/VM1/CD1'}],
+ 'Members@odata.count': 1,
+ 'Name': 'Virtual Media Collection',
+ 'Oem': {'Supermicro': {'@odata.type': '#SmcVirtualMediaExtensions.v1_0_0.VirtualMediaCollection',
+                        'VirtualMediaConfig': {'@odata.id': '/redfish/v1/Managers/1/VM1/CfgCD'}}}}
+
+
+
+LIST VIRTUAL MEDIA DEVICE###########################
+{'@odata.context': '/redfish/v1/$metadata#VirtualMedia.VirtualMedia',
+ '@odata.id': '/redfish/v1/Managers/1/VM1/CD1',
+ '@odata.type': '#VirtualMedia.v1_1_0.VirtualMedia',
+ 'ConnecteVia': 'URI',
+ 'Id': 'CD1',
+ 'Image': '192.168.76.39/sambashare/VMware-VMvisor-Installer-7.0.0-15843807.x86_64.iso',
+ 'ImageName': 'VMware-VMvisor-Installer-7.0.0-15843807.x86_64.iso',
+ 'Inserted': True,
+ 'MediaTypes': ['CD', 'DVD'],
+ 'Name': 'Virtual Removable Media',
+ 'WriteProtected': True}
+
+
+
+UPDATE VIRTUAL MEDIA##################################
+{'Success': {'@Message.ExtendedInfo': [{'Message': 'The Virtual Media was '
+                                                   'configured successfully.',
+                                        'MessageArgs': [''],
+                                        'MessageId': 'SMC.v1_0_0.OemVmCdcfgModified',
+                                        'RelatedProperties': [''],
+                                        'Resolution': 'No resolution was '
+                                                      'required.',
+                                        'Severity': 'Ok'}],
+             'Message': 'Successfully Completed Request. See ExtendedInfo for '
+                        'more information.',
+             'code': 'Base.v1_4_0.Success'}}
+{'@odata.context': '/redfish/v1/$metadata#VirtualMediaCollection.VirtualMediaCollection',
+ '@odata.id': '/redfish/v1/Managers/1/VM1',
+ '@odata.type': '#VirtualMediaCollection.VirtualMediaCollection',
+ 'Description': 'Collection of Virtual Media for this System',
+ 'Members': [{'@odata.id': '/redfish/v1/Managers/1/VM1/CD1'}],
+ 'Members@odata.count': 1,
+ 'Name': 'Virtual Media Collection',
+ 'Oem': {'Supermicro': {'@odata.type': '#SmcVirtualMediaExtensions.v1_0_0.VirtualMediaCollection',
+                        'VirtualMediaConfig': {'@odata.id': '/redfish/v1/Managers/1/VM1/CfgCD'}}}}
+
+
+
+LIST VIRTUAL MEDIA DEVICE###########################
+{'@odata.context': '/redfish/v1/$metadata#VirtualMedia.VirtualMedia',
+ '@odata.id': '/redfish/v1/Managers/1/VM1/CD1',
+ '@odata.type': '#VirtualMedia.v1_1_0.VirtualMedia',
+ 'ConnecteVia': 'URI',
+ 'Id': 'CD1',
+ 'Image': '192.168.76.39/sambashare/ubuntu-20.04-live-server-amd64.iso',
+ 'ImageName': 'ubuntu-20.04-live-server-amd64.iso',
+ 'Inserted': True,
+ 'MediaTypes': ['CD', 'DVD'],
+ 'Name': 'Virtual Removable Media',
+ 'WriteProtected': True}
+
+
+
+DISCONNECTING REDFISH VIRTUAL MEDIA CLIENT##################################
+CONNECTED: True
+CONNECTED: False
+```

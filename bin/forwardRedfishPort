@@ -1,0 +1,25 @@
+redfishEnable () {
+  local usage="USAGE: redfishEnable LOCAL_PORT REDFISH_SERVER_IP REDFISH_SERVER_PORT JUMP_HOST"
+
+  if [[ -z "$REDFISH_HOME" ]]; then
+    echo "REDFISH_HOME not set in environment"
+    usage
+    return 0
+  fi
+
+  if [ "$#" -ne 4 ]; then
+    echo $usage
+    return 0
+  fi
+
+  local connectionsLog="$REDFISH_HOME/redfishEnable.log"
+
+  local localPort=$1
+  local redfishServerIp=$2
+  local redfishServerPort=$3
+  local jumpHost=$4
+
+  local connection="ssh -fqTnN -L 0.0.0.0:${localPort}:${redfishServerIp}:${redfishServerPort} ${jumpHost}"
+  touch $connectionsLog ; echo "$connection" >> $connectionsLog
+  eval $connection
+}

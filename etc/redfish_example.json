@@ -1,7 +1,7 @@
 {
-  "target" : "https://airboat1.fyre.ibm.com:8443",
+  "target" : "https://hostname:port",
   "defaultPrefix" : "/redfish/v1",
-  "username" : "root",
-  "password" : "ibm-Genesis-Cl0ud",
+  "username" : "your_user",
+  "password" : "your_password",
   "authentication" : "session"
 }

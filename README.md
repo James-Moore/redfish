@@ -89,6 +89,12 @@ $ curl -k https://localhost:8443/redfish/v1/ | jq -r .
   "Oem": {}
 }
 ```
+### Samples
+Sample applications can be found in the com.ibm.cloud.ngbm.redfish.sample package.  These samples perform individual
+redfish operations against a physical server.  Sample applications include: PowerOn, ForcedPowerOn, PowerOff, 
+ForcedPowerOff, ListVirtualMedia, MountVirtualMedia, UnmountVirtualMedia, and more.  These sample applications
+demonstrate the ease of use inherent to programmatic server management through secure redfish restful interactions. 
+
 
 ### Example Output from VirtualMediaTest
 

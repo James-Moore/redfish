@@ -1,26 +1,10 @@
-from redfish.rest.v1 import HttpClient
-import com.ibm.cloud.ngbm.redfish as rf
-from com.ibm.cloud.ngbm.redfish.factory.ClientFactory import ClientFactory
 import pprint as p
+import com.ibm.cloud.ngbm.redfish as rf
+from com.ibm.cloud.ngbm.redfish.manage.AbstractManager import AbstractMananger
 
-class Power:
+class Power(AbstractMananger):
   def __init__(self):
-      self.factory: ClientFactory = ClientFactory()
-      self.client: HttpClient = self.factory.createClient()
-      self.connected: bool = False
-
-  def connectRedfish(self):
-      if not self.isConnectedRedfish():
-          self.factory.loginClient(self.client)
-          self.connected = True
-
-  def disconnectRedfish(self):
-      if self.isConnectedRedfish():
-          self.factory.logoutClient(self.client)
-          self.connected = False
-
-  def isConnectedRedfish(self) -> bool:
-      return self.connected
+      super().__init__()
 
   def isPowerOn(self) -> bool:
     if not self.isConnectedRedfish():

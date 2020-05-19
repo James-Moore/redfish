@@ -3,5 +3,7 @@
   "defaultPrefix" : "/redfish/v1",
   "username" : "your_user",
   "password" : "your_password",
-  "authentication" : "session"
+  "authentication" : "session",
+  "virtualMediaHost" : "sambaServerHost",
+  "virtualMediaPath" : "sambaServerPath"
 }

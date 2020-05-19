@@ -20,6 +20,15 @@ Requires the installation of Python 3
 
 Install required python libraries using requirements.txt
 
+#### Console Usage
+In order to lauch the console the operating system must have PyQt5 installed and QT5.  
+
+PyQT5: https://www.riverbankcomputing.com/static/Docs/PyQt5/installation.html
+
+QT5 General Information: https://doc.qt.io/qt-5/linux.html
+
+QT5 Deploy on Ubuntu: https://wiki.qt.io/Install_Qt_5_on_Ubuntu
+
 #### Forward Redfish Port
 
 In order to interact with your server's BMC you'll likely need to port forward.  The server's ip 

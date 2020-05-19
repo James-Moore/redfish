@@ -6,11 +6,13 @@ with open(os.environ['REDFISH_HOME']+'/etc/redfish.json') as f:
   cfg = json.load(f)
 
 #REDFISH TARGET
-target : str =cfg["target"]
-defaultPrefix : str =cfg["defaultPrefix"]
-username : str =cfg["username"]
-password : str =cfg["password"]
-authentication : str =cfg["authentication"]
+target : str = cfg["target"]
+defaultPrefix : str = cfg["defaultPrefix"]
+username : str = cfg["username"]
+password : str = cfg["password"]
+authentication : str = cfg["authentication"]
+virtualMediaHost : str = cfg["virtualMediaHost"]
+virtualMediaPath : str = cfg["virtualMediaPath"]
 
 #REDFISH SERVICES
 odataIdKey: str = "@odata.id"

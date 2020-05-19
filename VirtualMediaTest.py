@@ -1,4 +1,5 @@
 from com.ibm.cloud.ngbm.redfish.manage.VirtualMedia import VirtualMedia
+import com.ibm.cloud.ngbm.redfish as rf
 iso : str = None
 
 print("CONNECTING REDFISH VIRTUAL MEDIA CLIENT##################################")
@@ -12,8 +13,8 @@ vm.unmountVirtualMedia()
 print("\n\n")
 
 print("UPDATE VIRTUAL MEDIA##################################")
-vm.updateVirtualMediaConfig(host="192.168.76.27", path="/sambashare/ubuntu-18.04.4-live-server-amd64.iso")
-#vm.updateVirtualMediaConfig(host="192.168.76.27", path="/sambashare/mini.iso")
+vm.updateVirtualMediaConfig(host=rf.virtualMediaHost, path=rf.virtualMediaPath+"ubuntu-18.04.4-live-server-amd64.iso")
+#vm.updateVirtualMediaConfig(host=rf.virtualMediaHost, path=rf.virtualMediaPath+"mini.iso")
 vm.mountVirtualMedia()
 
 print("LIST VIRTUAL MEDIA DEVICE###########################")

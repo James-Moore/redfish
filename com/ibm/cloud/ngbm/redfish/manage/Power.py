@@ -34,14 +34,24 @@ class Power(AbstractMananger):
       response = self.client.post(path=rf.resetActionURI, body=shutdownType)
       p.pprint(response.dict)
 
+  def reboot(self, rebootType: dict):
+      self.shutdown(shutdownType=rebootType)
+
+
   def powerOn(self):
       self.startup(startupType=rf.resetActionOn)
 
   def powerOff(self):
       self.shutdown(shutdownType=rf.resetActionOff)
 
+  def restart(self):
+      self.reboot(rebootType=rf.resetActionRestart)
+
   def forcePowerOn(self):
       self.startup(startupType=rf.resetActionForceOn)
 
   def forcePowerOff(self):
       self.shutdown(shutdownType=rf.resetActionForceOff)
+
+  def forceRestart(self):
+      self.reboot(rebootType=rf.resetActionForceRestart)

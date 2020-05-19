@@ -1,2 +1,3 @@
 redfish~=2.1.5
 pprint~=0.1
+PyQt5~=5.14.2

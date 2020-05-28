@@ -258,4 +258,5 @@ LIST VIRTUAL MEDIA DEVICE###########################
 DISCONNECTING REDFISH VIRTUAL MEDIA CLIENT##################################
 CONNECTED: True
 CONNECTED: False
+
 ```
